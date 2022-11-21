@@ -19,15 +19,19 @@ const todoList = () =>
     );
   };
   const dueToday = () => {
+    //return all.filter
     return all.filter(
       (item) => item.dueDate === new Date().toLocaleDateString("en-CA")
     );
   };
   const dueLater = () => {
+    //return n.filter
     return n.filter(
       (item) => item.dueDate > new Date().toLocaleDateString("en-CA")
     );
   };
+  //return all
   return { n, add, markAsComplete, overdue, dueToday, dueLater };
 };
+//module export
 module.exports = todoList;
